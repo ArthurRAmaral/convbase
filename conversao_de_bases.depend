@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1557525108 source:c:\users\ruhtr\onedrive\documentos\codeblocks\testes\conversao_de_bases\main.c
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+
+1557441048 source:c:\users\ruhtr\onedrive\documentos\codeblocks\testes\conversao_de_bases\cnvscompleta.c
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+
