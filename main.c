@@ -11,7 +11,7 @@ int main()
     while (t==1)
     {
         m=0;
-        while (m<1||m>11)
+        while (m<1||m>12)
         {
             printf("Escolha a opção para conversão:\n\n");
             printf("1 - Decimal para binária;\n2 - Decimal para octal;\n3 - Decimal para hexadecimal\n");
@@ -76,13 +76,13 @@ int main()
                 system("cls");
                 break;
             }
-            if (m<1||m>11)
+            if (m<1||m>12)
             {
                 m=0;
             }
             else
             {
-                printf("Foi selecionado o número %d: conversão de base %d para a base %d\n Está correto?\n1 - Sim\n2 - Não\n ---> ",m,bi,bf);
+                printf("\nFoi selecionado o número %d: conversão de base %d para a base %d\n Está correto?\n1 - Sim\n2 - Não\n ---> ",m,bi,bf);
                 scanf("%d",&t);
                 switch (t)
                 {
@@ -97,7 +97,14 @@ int main()
             }
         }
         printf("Insira um núremo de base %d: ",bi);
-        scanf("%d",&n);
+        if (bi==16)
+        {
+            scanf("%x", &n);
+        }
+        else
+        {
+            scanf("%d",&n);
+        }
         conversao(n, bi, bf);
         system("pause");
         printf("\nDeseja faser mais uma conversão:\n1 - SIM\n2 - Não\n ---> ");

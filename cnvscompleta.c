@@ -4,7 +4,7 @@
 
 void conversao(int n, int bi, int bf)
 {
-    int ba, d, r, NA, N, x, c, m,sn;
+    int ba, d, r, NA, N, x, c, m, sn, v[10];
     float p;
     setlocale(LC_ALL,"portuguese");
     p=1;
@@ -13,6 +13,17 @@ void conversao(int n, int bi, int bf)
     sn=n;
     if (bi==10||bf==10)
     {
+        if (bi==16||bf==16)
+        {
+            if (bf==16)
+            {
+                printf("\n%d na base (%d) == %x na base (%d)\n\n",sn,bi,sn,bf);
+            }
+            else
+            {
+                printf("\n%x na base (%d) == %d na base (%d)\n\n",sn,bi,sn,bf);
+            }
+        }
         while (n>0)
         {
             r=n%bf;
@@ -46,6 +57,19 @@ void conversao(int n, int bi, int bf)
             NA=NA/bf;
             x=x+1;
         }
+        if (bi==16||bf==16)
+        {
+            if (bf==16)
+            {
+                printf("\n%d na base (%d) == %x na base (%d)\n\n",sn,bi,NA,bf);
+            }
+            else
+            {
+                printf("\n%x na base (%d) == %d na base (%d)\n\n",sn,bi,N,bf);
+            }
+        }
     }
-    printf("\n%d na base (%d) == %d na base (%d)\n\n",sn,bi,N,bf);
+    if (bi!=16&&bf!=16){
+        printf("\n%d na base (%d) == %d na base (%d)\n\n",sn,bi,N,bf);
+    }
 }
