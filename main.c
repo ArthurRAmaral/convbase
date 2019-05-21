@@ -14,10 +14,12 @@ int main()
         while (m<1||m>12)
         {
             printf("Escolha a opção para conversão:\n\n");
-            printf("1 - Decimal para binária;\n2 - Decimal para octal;\n3 - Decimal para hexadecimal\n");
-            printf("4 - Binária para decimal;\n5 - Binária para octal;\n6 - Binária para hexadecimal;\n");
-            printf("7 - Octal para decimal;\n8 - Octal para binária;\n9 - Octal para hexadecimal;\n");
-            printf("10 - Hexadecimal para decimal;\n11 - Hexadecimal para binária;\n12 - Hexadecimal para octal;\n");
+            printf("1 - Decimal para binária;\n");
+            printf("2 - Decimal para octal;\n");
+            printf("3 - Decimal para hexadecimal\n");
+            printf("4 - Binária para decimal;\n");
+            printf("5 - Octal para decimal;");
+            printf("6 - Hexadecimal para decimal;\n");
             printf("\nDigite um número --> ");
             scanf("%d",&m);
             switch (m)
@@ -39,36 +41,12 @@ int main()
                 bf=10;
                 break;
             case 5:
-                bi=2;
-                bf=8;
+                bi=8;
+                bf=10;
                 break;
             case 6:
-                bi=2;
-                bf=16;
-                break;
-            case 7:
-                bi=8;
-                bf=10;
-                break;
-            case 8:
-                bi=8;
-                bf=2;
-                break;
-            case 9:
-                bi=8;
-                bf=16;
-                break;
-            case 10:
                 bi=16;
                 bf=10;
-                break;
-            case 11:
-                bi=16;
-                bf=2;
-                break;
-            case 12:
-                bi=16;
-                bf=8;
                 break;
             default:
                 printf("\nNúmero inválido. Tente de novo\n");
@@ -76,7 +54,7 @@ int main()
                 system("cls");
                 break;
             }
-            if (m<1||m>12)
+            if (m<1||m>6)
             {
                 m=0;
             }
