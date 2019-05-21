@@ -31,10 +31,19 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="arthur16.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="cnvscompleta.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="daniel2.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="main.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="marcio8.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Extensions>
