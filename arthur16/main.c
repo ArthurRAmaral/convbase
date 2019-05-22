@@ -7,31 +7,37 @@ int main()
     conv16(1);
 }
 
-conv16(int p)
+void conv16(int p)
 {
-    int i,num,r,expx;
-    char n,sn;
+    int i,num,r,snum;
+    char n[10],sn;
     if (p==1)
     {
         printf("Insira um número na base 10: ");
-        scanf("%c",&num);
-        sn=num;
+        scanf("%d",&num);
+        snum=num;
+        i=0;
+        n[i]=1;
         while (num>0)
         {
-            for(i=strlen(num); i=0; i=i-1)
-            {
+                num=num/16;
                 r=num%16;
                 if (r>=10)
                 {
                     r=r+55;
                 }
-                if (r<10)
+                else
                 {
                     r=r+48;
                 }
                 n[i]=r;
-            }
+                i=i+1;
         }
+        for (i=0;i==strlen(n);i++)
+        {
+            printf("%s",n[i]);
+        }
+        //printf("O resultado da converção: %d(10) para %s(16).\n",sn,n[i-1]);
     }
     if (p==2)
     {
@@ -40,15 +46,14 @@ conv16(int p)
         sn=n;
         for (i=0; i<strlen(n); i++)
         {
-            if (n[i]==A||n[i]==B||n[i]==C||n[i]==D||n[i]==E||n[i]==F)
+            if (n[i]=='A'||n[i]=='B'||n[i]=='C'||n[i]=='D'||n[i]=='E'||n[i]=='F')
             {
                 n[i]=n[i]-55;
             }
-            if (n[i]==a||n[i]==b||n[i]==c||n[i]==d||n[i]==e||n[i]==f)
+            if (n[i]=='a'||n[i]=='b'||n[i]=='c'||n[i]=='d'||n[i]=='e'||n[i]=='f')
             {
                 n[i]=n[i]-87;
             }
         }
     }
-    return 0;
 }
